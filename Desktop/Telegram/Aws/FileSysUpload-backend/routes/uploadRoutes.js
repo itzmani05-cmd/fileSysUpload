@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 const auth= require("../middleware/auth");
 
 const router= express.Router();
-const s3= new AWS.sdk({region: "us-east-1"});
+const s3= new AWS.S3({region: "us-east-1"});
 
 const upload= multer({
     storage: multer.memoryStorage(),
